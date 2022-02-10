@@ -17,10 +17,11 @@ phases:
     - echo Build started on `date`
     - apt update
     - apt upgrade -y
+    - apt-get purge php8.0 -y
     - apt install apt-transport-https software-properties-common
     - add-apt-repository ppa:ondrej/php
     - apt update -y
-    - apt install php8.1 -y
+    - apt install php8.0 -y
     - php -v
     - echo installing composer..
     - composer install
