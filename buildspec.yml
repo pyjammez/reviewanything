@@ -16,7 +16,7 @@ phases:
     commands:
     - echo Build started on `date`
     - add-apt-repository ppa:ondrej/php
-    - apt install php8.0
+    - apt install php8.0 -y
     - echo installing composer..
     - php -v
     - composer install
