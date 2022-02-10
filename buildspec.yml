@@ -15,9 +15,9 @@ phases:
   build:
     commands:
     - echo Build started on `date`
+    - apt-get purge php8* -y
     - apt update
     - apt upgrade -y
-    - apt-get purge php8.0 -y
     - apt install apt-transport-https software-properties-common
     - add-apt-repository ppa:ondrej/php
     - apt update -y
