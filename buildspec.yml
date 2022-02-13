@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install: 
     runtime-versions:
-      php: 8.x
+      php: 8.0
   pre_build: # commands to be run before build
     commands:
     - echo Logging in to Amazon ECR....
@@ -15,14 +15,6 @@ phases:
   build:
     commands:
     - echo Build started on `date`
-    - apt-get purge php8* -y
-    - apt update
-    - apt upgrade -y
-    - apt install apt-transport-https software-properties-common
-    - add-apt-repository ppa:ondrej/php
-    - apt update -y
-    - apt-get install php8.1 -y
-    - php -v
     - echo installing composer..
     - composer install
     - echo creating .env file..
