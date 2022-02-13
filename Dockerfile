@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM public.ecr.aws/micahhausler/alpine:3.14.0
 
 # Install packages and remove default server definition
 RUN apk --no-cache add \
