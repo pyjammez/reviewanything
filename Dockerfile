@@ -24,7 +24,7 @@ RUN apk --no-cache add \
   php8-xmlreader \
   php8-zlib \
   supervisor \
-  && rm /etc/nginx/conf.d/default.conf
+# && rm /etc/nginx/conf.d/default.conf
 
 # Create symlink so programs depending on `php` still function
 RUN ln -s /usr/bin/php8 /usr/bin/php
